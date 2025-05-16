@@ -51,7 +51,7 @@ const Activities = ({ defaultColor }) => {
               </div>
               <div className="mb-6 text-gray-100 sm:mb-8 sm:text-xs">
                 {element.location}
-                <span className="sm:hidden"> | {element.date}</span>
+                <span className="sm:hidden"> {element?.location ? "|" : "" } {element.date}</span>
               </div>
               <div className="mb-4 text-left text-gray-200">
                 {element.description}
