@@ -1,9 +1,15 @@
+import { useInView } from 'react-intersection-observer';
 import Skill from '../components/Skill';
 import { backend_skill, frontend_skill, other_skill } from '../constants';
 
 const Skills = () => {
+  const { ref, inView } = useInView({
+    threshold: 0.2, // khi 20% vùng Skills vào màn hình thì trigger
+    triggerOnce: true,
+  });
+
   return (
-    <section id="skills" className="mt-20 scroll-mt-20">
+    <section id="skills" className="mt-20 scroll-mt-20" ref={ref}>
       <div className="relative flex h-full flex-col items-center justify-center gap-3 overflow-hidden">
         <h2 className="hero_tag text-gray_gradient font-raleway text-5xl">
           Kĩ năng
@@ -16,8 +22,9 @@ const Skills = () => {
               src={skill.Image}
               width={skill.width}
               height={skill.height}
-              index={skill}
+              index={index}
               skillName={skill.skill_name}
+              shouldAnimate={inView}
             />
           ))}
         </div>
@@ -29,8 +36,9 @@ const Skills = () => {
               src={skill.Image}
               width={skill.width}
               height={skill.height}
-              index={skill}
+              index={index}
               skillName={skill.skill_name}
+              shouldAnimate={inView}
             />
           ))}
         </div>
@@ -42,8 +50,9 @@ const Skills = () => {
               src={skill.Image}
               width={skill.width}
               height={skill.height}
-              index={skill}
+              index={index}
               skillName={skill.skill_name}
+              shouldAnimate={inView}
             />
           ))}
         </div>

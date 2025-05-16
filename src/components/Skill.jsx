@@ -1,26 +1,23 @@
 import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 
-const Skill = ({ src, width, height, index, skillName }) => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-  });
-
+const Skill = ({ src, width, height, index, skillName, shouldAnimate }) => {
   const imageVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
   };
 
-  const animationDelay = 0.2;
+  const animationDelay = 0.15;
 
   return (
     <motion.div
-      ref={ref}
       initial="hidden"
       variants={imageVariants}
-      animate={inView ? 'visible' : 'hidden'}
-      custom={index}
-      transition={{ delay: index * animationDelay }}
+      animate={shouldAnimate ? 'visible' : 'hidden'}
+      transition={{
+        delay: index * animationDelay,
+        duration: 0.4,
+        ease: 'easeOut',
+      }}
       className="inline-block cursor-pointer"
     >
       <img
