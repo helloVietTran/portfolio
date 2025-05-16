@@ -1,5 +1,5 @@
 import Description from '../components/Description';
-import TimeLine from '../components/TimeLine';
+import Activities from '../components/Activities.jsx';
 
 const About = () => {
   return (
@@ -9,7 +9,7 @@ const About = () => {
         Quá trình học tập
       </h2>
 
-      <TimeLine />
+      <Activities />
     </div>
   );
 };

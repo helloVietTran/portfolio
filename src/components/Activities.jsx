@@ -11,7 +11,7 @@ const colorMap = {
   gray: 'bg-gray-500',
 };
 
-export default function TimeLine({ defaultColor }) {
+const Activities = ({ defaultColor }) => {
   return (
     <div className="flex flex-col items-center mt-10">
       {timeline_elements.map((element, index) => {
@@ -87,3 +87,6 @@ export default function TimeLine({ defaultColor }) {
     </div>
   );
 }
+
+
+export default Activities;
