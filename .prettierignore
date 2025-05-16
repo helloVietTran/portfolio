@@ -1,0 +1,44 @@
+# node_modules là bắt buộc phải ignore
+node_modules
+
+# thư mục build / production
+dist
+build
+.out
+.next
+
+# output của Vite hoặc bundler khác
+coverage
+
+# lock files hoặc môi trường
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# configs riêng cho tool khác
+*.log
+*.lock
+*.tsbuildinfo
+
+# git stuff
+.git
+.gitignore
+
+# output hình ảnh hoặc media
+public/**/*.{png,jpg,jpeg,gif,svg,webp,mp4,mp3,ico}
+
+# output xuất file JSON giả lập
+mock-data/
+mocks/
+data/**/*.json
+
+# các thư mục tài nguyên bên ngoài
+static/
+assets/
+
+# nếu dùng Firebase hoặc tương tự
+firebase.json
+functions/
+
+# test snapshot (nếu dùng Jest)
+__snapshots__/
