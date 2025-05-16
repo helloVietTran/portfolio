@@ -1,5 +1,5 @@
-import Timeline from '../components/TimeLine';
 import Description from '../components/Description';
+import TimeLine from '../components/TimeLine';
 
 const About = () => {
   return (
@@ -9,7 +9,7 @@ const About = () => {
         Quá trình học tập
       </h2>
 
-      <Timeline />
+      <TimeLine />
     </div>
   );
 };
