@@ -1,5 +1,5 @@
+import Skill from '../components/Skill';
 import { backend_skill, frontend_skill, other_skill } from '../constants';
-import SkillDataProvider from './SkillDataProvider';
 
 const Skills = () => {
   return (
@@ -10,37 +10,40 @@ const Skills = () => {
         </h2>
 
         <div className="mt-12 flex flex-row flex-wrap items-center justify-around gap-8">
-          {frontend_skill.map((image, index) => (
-            <SkillDataProvider
+          {frontend_skill.map((skill, index) => (
+            <Skill
               key={index}
-              src={image.Image}
-              width={image.width}
-              height={image.height}
-              index={index}
+              src={skill.Image}
+              width={skill.width}
+              height={skill.height}
+              index={skill}
+              skillName={skill.skill_name}
             />
           ))}
         </div>
 
         <div className="mt-5 flex flex-row flex-wrap items-center justify-around gap-8">
-          {backend_skill.map((image, index) => (
-            <SkillDataProvider
+          {backend_skill.map((skill, index) => (
+            <Skill
               key={index}
-              src={image.Image}
-              width={image.width}
-              height={image.height}
-              index={index}
+              src={skill.Image}
+              width={skill.width}
+              height={skill.height}
+              index={skill}
+              skillName={skill.skill_name}
             />
           ))}
         </div>
 
         <div className="mt-5 flex flex-row flex-wrap items-center justify-around gap-8">
-          {other_skill.map((image, index) => (
-            <SkillDataProvider
+          {other_skill.map((skill, index) => (
+            <Skill
               key={index}
-              src={image.Image}
-              width={image.width}
-              height={image.height}
-              index={index}
+              src={skill.Image}
+              width={skill.width}
+              height={skill.height}
+              index={skill}
+              skillName={skill.skill_name}
             />
           ))}
         </div>

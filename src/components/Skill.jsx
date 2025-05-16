@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-const SkillDataProvider = ({ src, width, height, index }) => {
+const Skill = ({ src, width, height, index, skillName }) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
   });
@@ -12,6 +12,7 @@ const SkillDataProvider = ({ src, width, height, index }) => {
   };
 
   const animationDelay = 0.2;
+
   return (
     <motion.div
       ref={ref}
@@ -20,16 +21,17 @@ const SkillDataProvider = ({ src, width, height, index }) => {
       animate={inView ? 'visible' : 'hidden'}
       custom={index}
       transition={{ delay: index * animationDelay }}
+      className="inline-block cursor-pointer"
     >
       <img
         src={src}
         width={0.85 * width}
         height={0.85 * height}
-        alt="skill image"
-        className='rounded-xl'
+        alt={`skill ${skillName}`}
+        className="rounded-xl"
       />
     </motion.div>
   );
 };
 
-export default SkillDataProvider;
+export default Skill;
