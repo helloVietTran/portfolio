@@ -25,10 +25,10 @@ const Skill = ({ src, width, height, index, skillName }) => {
     >
       <img
         src={src}
-        width={0.85 * width}
-        height={0.85 * height}
+        width={width}
+        height={height}
         alt={`skill ${skillName}`}
-        className="rounded-xl"
+        className="rounded-xl transform scale-50 sm:scale-60 md:scale-85"
       />
     </motion.div>
   );

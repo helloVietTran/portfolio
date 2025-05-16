@@ -9,7 +9,7 @@ const Skills = () => {
           Kĩ năng
         </h2>
 
-        <div className="mt-12 flex flex-row flex-wrap items-center justify-around gap-8">
+        <div className="mt-12 flex flex-row items-center justify-around md:gap-8">
           {frontend_skill.map((skill, index) => (
             <Skill
               key={index}
@@ -22,7 +22,7 @@ const Skills = () => {
           ))}
         </div>
 
-        <div className="mt-5 flex flex-row flex-wrap items-center justify-around gap-8">
+        <div className="mt-5 flex flex-row flex-wrap items-center justify-around md:gap-8">
           {backend_skill.map((skill, index) => (
             <Skill
               key={index}
@@ -35,7 +35,7 @@ const Skills = () => {
           ))}
         </div>
 
-        <div className="mt-5 flex flex-row flex-wrap items-center justify-around gap-8">
+        <div className="mt-5 flex flex-row flex-wrap items-center justify-around md:gap-8">
           {other_skill.map((skill, index) => (
             <Skill
               key={index}
