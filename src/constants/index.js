@@ -42,7 +42,7 @@ export const timeline_elements = [
     {
         id: 3,
         title: "Dự án Vbrary",
-        description: "CSS được bắt đầu cho màn hình nhỏ rồi mở rộng cho các màn hình lớn",
+        description: "Dự án đầu tiên tự thiết kế giao diện, CSS được bắt đầu cho màn hình nhỏ rồi mở rộng cho các màn hình lớn",
         buttonText: "Chi tiết",
         buttonHref: "https://github.com/helloVietTran/library-management-fe",
         date: "3/2024-5/2025",
