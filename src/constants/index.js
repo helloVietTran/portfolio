@@ -5,7 +5,7 @@ export const projects = [
         des: "Ứng dụng đọc truyện tranh hiện đại, miễn phí và dễ sử dụng",
         img: "/assets/demo_vstory.png",
         iconLists: ['/assets/react.svg', '/assets/tailwindcss.png', '/assets/spring.png', '/assets/mysql.png', '/assets/redis.png',],
-        link: "https://v-story.vercel.app",
+        link: "https://www.youtube.com/watch?v=-pk9nHK_KPE",
     },
     {
         id: 2,
